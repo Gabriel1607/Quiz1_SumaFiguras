@@ -16,6 +16,9 @@ public void drawFigures() {
 public void moveFigures() {
 	logic.moveFigures();
 }
+public void pauseFigures() {
+	logic.pauseFigures();
+}
 public void drawCircle() {
 	logic.drawCircle();
 }

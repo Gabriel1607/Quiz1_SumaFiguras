@@ -100,6 +100,14 @@ protected void move() {
 		
 	}
 }
+
+public boolean isMov() {
+	return isMov;
+}
+
+public void setMov(boolean isMov) {
+	this.isMov = isMov;
+}
 	
 
 }

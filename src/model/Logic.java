@@ -73,6 +73,16 @@ public class Logic extends PApplet {
 
 		}
 	}
+	public void pauseFigures() {
+		for (int i = 0; i < figures.size(); i++) {
+			if (app.mouseX > (figures.get(i).getPosX() - (figures.get(i).getTam() / 2))
+					&& app.mouseX < (figures.get(i).getPosX() + (figures.get(i).getTam() / 2))
+					&& app.mouseY > (figures.get(i).getPosY() - (figures.get(i).getTam() / 2))
+					&& app.mouseY < (figures.get(i).getPosY() + (figures.get(i).getTam() / 2))) {
+				figures.get(i).setMov(!figures.get(i).isMov());
+			}
+		}
+	}
 	public void drawCircle() {
 		circle.drawFigure();
 	}

@@ -22,4 +22,10 @@ public void draw() {
 	controller.drawFigures();
 	controller.moveFigures();
 }
+public void mousePressed() {
+	
+	if (mouseButton==LEFT) {
+		controller.pauseFigures();
+	}
+}
 }
