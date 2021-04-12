@@ -10,7 +10,7 @@ public class Main extends PApplet{
 		PApplet.main(Main.class.getName());
 	}
 public void settings() {
-	
+	size(700,700);
 }
 public void setup() {
 	
