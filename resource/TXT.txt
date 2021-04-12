@@ -1,4 +1,3 @@
-figura tam posX posY dirección valor
 Cuadrado 50 400 30 -1 5
 Circulo 30 300 40 1 8
 Cuadrado 20 350 50 1 9

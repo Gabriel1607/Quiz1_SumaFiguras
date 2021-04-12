@@ -10,6 +10,9 @@ public Controller(PApplet app) {
 	this.app = app;
 	logic = new Logic(app);
 }
+public void drawFigure() {
+	logic.drawFigures();
+}
 public void drawCircle() {
 	logic.drawCircle();
 }

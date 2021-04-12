@@ -18,6 +18,6 @@ public void setup() {
 	controller = new Controller(this);
 }
 public void draw() {
-	
+	controller.drawFigure();
 }
 }
