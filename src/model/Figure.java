@@ -91,13 +91,13 @@ public void setB(int b) {
 protected abstract void drawFigure();
 protected void move() {
 	if (isMov) {
-		if (bounce == 0) {
+		
 			if (posY <= 0 || posY >= 700) {
 				direction = direction * -1;
 			}
-			posY += posY* direction;
+			posY += (2*direction);
 
-		} 
+		
 	}
 }
 	
