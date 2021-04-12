@@ -21,6 +21,7 @@ public void draw() {
 	background(255);
 	controller.drawFigures();
 	controller.moveFigures();
+	controller.fuseFigures();
 }
 public void mousePressed() {
 	

@@ -13,7 +13,7 @@ public class Triangle extends Figure {
 				getPosX() + getTam() / 2,
 				getPosY()+getTam()/2);	  
 		
-		app.fill(255);
+		app.fill(0);
 		app.textAlign(CENTER);
 		app.text(getAmount(),getPosX(),getPosY()+ getTam()/3);
 	}

@@ -22,6 +22,9 @@ public void pauseFigures() {
 public void generateFigures() {
 	logic.generateFigures();
 }
+public void fuseFigures() {
+	logic.fuseFigures();
+}
 public void drawCircle() {
 	logic.drawCircle();
 }
