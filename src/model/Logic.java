@@ -51,11 +51,11 @@ public class Logic extends PApplet {
 			int amount = Integer.parseInt(figureAtributes[5]);
 		
 			if (figType.equals("Circulo")) {
-				Circle c = new Circle(tam, posx, posy, direction, 255, 0, 0, amount,app);
+				Circle c = new Circle(tam, posx, posy, direction, 255, 0, 0, amount,0,app);
 				figures.add(c);
 				
 			} else if (figType.equals("Cuadrado")) {
-				Square s = new Square(tam, posx, posy, direction, 0, 255, 0, amount, app);
+				Square s = new Square(tam, posx, posy, direction, 0, 255, 0, amount,0,app);
 				figures.add(s);
 			}
 		}
@@ -66,8 +66,12 @@ public class Logic extends PApplet {
 
 		}
 		
-		
-		
+	}
+	public void moveFigures() {
+		for (int i = 0; i < figures.size(); i++) {
+			figures.get(i).move();
+
+		}
 	}
 	public void drawCircle() {
 		circle.drawFigure();

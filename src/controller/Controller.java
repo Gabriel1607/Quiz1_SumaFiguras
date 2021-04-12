@@ -13,6 +13,9 @@ public Controller(PApplet app) {
 public void drawFigures() {
 	logic.drawFigures();
 }
+public void moveFigures() {
+	logic.moveFigures();
+}
 public void drawCircle() {
 	logic.drawCircle();
 }

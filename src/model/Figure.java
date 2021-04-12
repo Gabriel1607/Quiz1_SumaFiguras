@@ -4,9 +4,9 @@ import processing.core.PApplet;
 
 public abstract class Figure extends PApplet{
 	PApplet app;
-	protected int posX,posY,tam,direction,amount,r,g,b;
+	protected int posX,posY,tam,direction,amount,r,g,b,bounce;
 	protected boolean isMov;
-public Figure(int tam, int posX, int posY, int direction, int r, int g, int b, int amount, PApplet app) {
+public Figure(int tam, int posX, int posY, int direction, int r, int g, int b, int amount, int bounce, PApplet app) {
 		
 		this.tam=tam;
 		this.posX=posX;
@@ -14,6 +14,7 @@ public Figure(int tam, int posX, int posY, int direction, int r, int g, int b, i
 		this.direction=direction;
 		this.app=app;
 		this.amount=amount; 
+		this.bounce=bounce;
 		
 		this.r = r;
 		this.g = g;
@@ -88,7 +89,17 @@ public void setB(int b) {
 }
 
 protected abstract void drawFigure();
-protected abstract void move();
+protected void move() {
+	if (isMov) {
+		if (bounce == 0) {
+			if (posY <= 0 || posY >= 700) {
+				direction = direction * -1;
+			}
+			posY += posY* direction;
+
+		} 
+	}
+}
 	
 
 }

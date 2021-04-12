@@ -19,5 +19,6 @@ public void setup() {
 }
 public void draw() {
 	controller.drawFigures();
+	controller.moveFigures();
 }
 }
