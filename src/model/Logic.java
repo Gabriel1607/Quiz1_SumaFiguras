@@ -27,17 +27,6 @@ public class Logic extends PApplet {
 		//System.out.println(loadText[4]);
 		//System.out.println(loadText[5]);
 		//System.out.println(loadText[6]);
-		/*for (int i = 0; i < loadText.length; i++) {
-			String[] tempArray = loadText[i].split("\\r\\n|\\n\\r"); 
-			//"\r\n" es para hacer un salto de linea
-			for (int j = 0; j < tempArray.length; j++) {
-				words.add(tempArray[j]);
-				
-			}
-	
-			
-		}*/
-		
 	}
 	public void TextFigures() {
 		for (int i = 0; i < loadText.length; i++) {
@@ -89,5 +78,29 @@ public class Logic extends PApplet {
 
 	public void drawSquare() {
 		square.drawFigure();
+	}
+	public void generateFigures() {
+
+		int figType = (int) app.random(0, 2);
+		int tam = (int) app.random(10, 100);
+		int posX = (int) app.random(0, 500);
+		int posY = (int) app.random(0, 500);
+		int direction = (int) app.random(0, 2);
+		int r = (int) app.random(0, 255);
+		int g = (int) app.random(0, 255);
+		int b = (int) app.random(0, 255);
+		
+		if (direction == 0) {
+			direction = -1;
+		}
+		int amount = (int) app.random(1, 10);
+		if (figType == 0) {
+			Circle c = new Circle(tam,posX, posY, direction, r, g, b, amount,0, app);
+			figures.add(c);
+
+		} else if (figType == 1) {
+			Square s = new Square(tam,posX, posY, direction, r, g, b, amount,0, app);
+			figures.add(s);
+		}
 	}
 }

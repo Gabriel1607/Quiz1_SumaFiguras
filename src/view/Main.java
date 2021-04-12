@@ -26,6 +26,8 @@ public void mousePressed() {
 	
 	if (mouseButton==LEFT) {
 		controller.pauseFigures();
+	}else if (mouseButton==RIGHT) {
+		controller.generateFigures();
 	}
 }
 }

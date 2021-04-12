@@ -19,6 +19,9 @@ public void moveFigures() {
 public void pauseFigures() {
 	logic.pauseFigures();
 }
+public void generateFigures() {
+	logic.generateFigures();
+}
 public void drawCircle() {
 	logic.drawCircle();
 }
