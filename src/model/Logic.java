@@ -10,13 +10,20 @@ public class Logic extends PApplet {
 	ArrayList<String> words;
 	ArrayList<Figure> figures;
 	public Logic(PApplet app) {
-		
-		this.app = app;
-		loadText = app.loadStrings("../data/TXT.txt");
 		words = new ArrayList<String>();
+		figures = new ArrayList<Figure>();
+		this.app = app;
+		loadText = app.loadStrings("../resource/TXT.txt");
+		
 		for (int i = 0; i < loadText.length; i++) {
-			words.add(loadText[i].split("\\r\\n"));
+			String[] tempArray = loadText[i].split("\\r\\n|\\n\\r"); 
 			//"\r\n" es para hacer un salto de linea
+			for (int j = 0; j < tempArray.length; j++) {
+				words.add(tempArray[j]);
+				
+			}
+	
+			
 		}
 	}
 	public void drawCircle() {
