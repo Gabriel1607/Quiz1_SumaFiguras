@@ -7,6 +7,7 @@ public class Circle extends Figure {
 		super(tam, posX, posY, direction, r, g, b, amount, app);
 	}
 	protected void drawFigure() {
+		
 		app.fill(r,g,b);
 		app.ellipse(posX, posY, tam, tam);
 		

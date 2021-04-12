@@ -7,7 +7,9 @@ public class Square extends Figure {
 		super(tam, posX, posY, direction, r, g, b, amount, app);
 	}
 	protected void drawFigure() {
+		
 		app.fill(r,g,b);
+		app.rectMode(CENTER);
 		app.rect(posX, posY, tam, tam);
 		
 		app.fill(0);

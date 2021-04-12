@@ -18,6 +18,8 @@ public class Logic extends PApplet {
 		figures = new ArrayList<Figure>();
 		this.app = app;
 		loadText = app.loadStrings("../resource/TXT.txt");
+		TextFigures();
+//System.out.println(figures.size());
 		//System.out.println(loadText[0]);
 		//System.out.println(loadText[1]);
 		//System.out.println(loadText[2]);
@@ -39,19 +41,21 @@ public class Logic extends PApplet {
 	}
 	public void TextFigures() {
 		for (int i = 0; i < loadText.length; i++) {
+			
 			String[] figureAtributes = loadText[i].split(" ");
-			String figType = loadText[0];
+			String figType = figureAtributes[0];
 			int tam = Integer.parseInt(figureAtributes[1]);
 			int posx = Integer.parseInt(figureAtributes[2]);
 			int posy = Integer.parseInt(figureAtributes[3]);
 			int direction = Integer.parseInt(figureAtributes[4]);
 			int amount = Integer.parseInt(figureAtributes[5]);
+		
 			if (figType.equals("Circulo")) {
-				Circle c = new Circle(tam, posx, posy, direction, 255, 0, 0, amount, app);
+				Circle c = new Circle(tam, posx, posy, direction, 255, 0, 0, amount,app);
 				figures.add(c);
-
+				
 			} else if (figType.equals("Cuadrado")) {
-				Square s = new Square(tam, posx, posy, direction, 255, 0, 0, amount, app);
+				Square s = new Square(tam, posx, posy, direction, 0, 255, 0, amount, app);
 				figures.add(s);
 			}
 		}
@@ -61,6 +65,9 @@ public class Logic extends PApplet {
 			figures.get(i).drawFigure();
 
 		}
+		
+		
+		
 	}
 	public void drawCircle() {
 		circle.drawFigure();
